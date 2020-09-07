@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.service.afterwatch" name="After Watch" version="1.2.3" provider-name="jvandenbroek, wuff">
+	<requires>
+		<!-- <import addon="xbmc.python" version="3.0.0"/> -->
+	</requires>
+	<extension point="xbmc.service" library="service.py" start="login" />
+	<extension point="xbmc.python.script" library="script.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Move or delete after watching</summary>
+		<description>After watching a movie or episode:
+- Move or delete
+- Rate on library
+- Show quit menu/Log off/Turn off display
+
+The alternate file management method is used to be compatible with SMB and NFS shares. When using only local (mounted) paths, it's recommended not to activate this method (moving files will be much faster).
+
+NOTE: "Allow file renaming and deletion" under Settings -> Appearance -> File Lists needs to be enabled in order for this plugin to work. 
+
+Credits to Pedro Pinto (r.pynto@gmail.com) for the original add-on where most of the code in this version is based on!
+</description>
+		<platform>all</platform>
+		<email>jvandenbroek@gmail.com</email>
+		<news>
+1.2.3 (2020-06-28)
+* Remove python requirement to retain Kodi18/19 compatibility
+* Adjust Dialog().yesno due to Kodi19 change
+
+1.2.2 (2019-12-30)
+* simplify settings for Kodi 18 and below
+
+1.2.1 (2019-12-29)
+* fix error due to removal of credentials of non-smb paths
+
+1.2.0 (2019-12-29)
+* Reorganise settings, added restrictions menu
+* Add episode restriction option enabling to select the opposite of the exclude list, i.e. whitelist
+* Add movie/episode 'exclude folder' and 'include only folder' restriction
+
+1.1.1 (2019-12-25)
+* Add python 2 backwards compatibility
+* Skip processing if episodes or movies are not managed
+
+1.1.0 (2019-11-17)
+* Migrate to Python 3 for Kodi 19. Not backwards compatible.
+* Adjust setting to turn of display to only state Linux
+* Removed Windows CEC binary from addon
+
+1.0.10 (2019-06-26)
+* Remove duplicate setting "remove video from library"
+
+1.0.9 (2019-06-18):
+* Replace strings.xml with strings.po for Kodi v19 compatibility
+* Fix alternative method move
+</news>
+		<forum>https://forum.kodi.tv/showthread.php?tid=162770</forum>
+		<source>https://github.com/AnonTester/script.service.afterwatch</source>
+                <assets>
+                        <icon>icon.png</icon>
+                        <screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+                </assets>
+	</extension>
+</addon>

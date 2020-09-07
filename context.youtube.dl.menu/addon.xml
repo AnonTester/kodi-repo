@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="context.youtube.dl.menu" version="1.2.3" name="youtube-dl Context Menu" provider-name="wuff">
+    <requires>
+        <!-- <import addon="xbmc.python" version="3.0.0"/> -->
+        <import addon="plugin.video.youtube" version="5.4.0"/>
+        <import addon="script.module.youtube.dl" version="17.709.0"/>
+    </requires>
+    <extension point="xbmc.service" library="service.py" start="startup" />
+    <extension point="xbmc.python.script" library="dl_video.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <menu>
+                <label>youtube-dl</label>
+                <item library="dl_video.py">
+                    <label>Download Video</label>
+                    <visible>
+                        String.Contains(ListItem.FileNameAndPath,video_id) + String.Contains(ListItem.FileNameAndPath,youtube) + !ListItem.IsFolder + !String.IsEqual(Container.FolderPath,plugin://plugin.video.youtube/special/live/)
+                    </visible>
+                </item>
+                <item library="dl_playlist.py">
+                    <label>Download Playlist</label>
+                    <visible>
+                        [ String.Contains(ListItem.FileNameAndPath,playlist) | String.Contains(Container.FolderPath,playlist) ] + String.Contains(ListItem.FileNameAndPath,youtube) + !ListItem.IsFolder + !String.IsEqual(Container.FolderPath,plugin://plugin.video.youtube/special/live/)
+                    </visible>
+                </item>
+                <item library="dl_settings.py">
+                    <label>youtube-dl context settings</label>
+                    <visible>
+                        String.Contains(ListItem.FileNameAndPath,youtube) + !ListItem.IsFolder + !String.IsEqual(Container.FolderPath,plugin://plugin.video.youtube/special/live/)
+                    </visible>
+                </item>
+                <item library="ytdl_settings.py">
+                    <label>youtube-dl control settings</label>
+                    <visible>
+                        String.Contains(ListItem.FileNameAndPath,youtube) + !ListItem.IsFolder + !String.IsEqual(Container.FolderPath,plugin://plugin.video.youtube/special/live/)
+                    </visible>
+                </item>
+                <item library="ytdl_info.py">
+                    <label>youtube-dl core info</label>
+                    <visible>
+                        String.Contains(ListItem.FileNameAndPath,youtube) + !ListItem.IsFolder + !String.IsEqual(Container.FolderPath,plugin://plugin.video.youtube/special/live/)
+                    </visible>
+                </item>
+            </menu>
+        </menu>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <news>
+1.2.3 (2020-09-07)
+------------------
+- Change xbmc.translatePath to xbmcvfs.translatePath for Kodi 19
+
+1.2.2 (2020-07-04)
+------------------
+- Change log levels for Kodi 19
+
+1.2.1 (2020-07-03)
+------------------
+- Remove non-existing info fields from playlist download function
+- Use regex for filename cleanup
+- Further fix to failed move due to format extension not identified properly in newer ffmpeg version
+- Prevent video download notification during playback when downloading whole playlist 
+
+1.2.0 (2020-06-27)
+------------------
+- Remove python requirement, reinstating backwards compatibility
+- Further changes to copy method, but Kodi NFS/SMB stalls randomly during copy. Best to use system mounted target path!
+- Change default filename template to include year and separate format with dot
+- Add option to set max video resolution to download (default 1080p)
+- Fix error notification when target path not writeable
+- Improve retry loop on move error
+- Add menu entry to download all videos of playlists
+- Fix youtube-dl core info context item not working
+- Add menu entry for youtube-dl context menu settings
+- Add option to download videos or playlists into uploader directory (default off)
+- Add options to add upload year and resolution to filename (default on)
+- Fix failed move due to format extension not identified properly in newer ffmpeg versions
+- Add option to remove variants of 'Official Music Video' from filename (default on)
+
+1.1.7 (2020-03-15)
+------------------
+- Added alternative file copy method when xbmcvfs.copy fails
+- bump python requirement to 3.0.0 as now required by Kodi 19. This breaks backwards compatibility!
+- Improved error handling when video not available
+
+1.1.6
+-----
+- Kodi 19/Python 3 compatibility
+
+1.1.5
+-----
+- Adjust exception handling code for modern python
+
+1.1.4
+-----
+- Abort gracefully if listitem property does not exist
+
+1.1.3
+-----
+- Fix some issues with unicode characters in titles
+
+1.1.2
+-----
+- Update links in addon.xml
+
+1.1.1
+-----
+- Add help label to 'record' button on Video OSD by patching Settings.xml file
+
+1.1.0
+-----
+- Check kodi vfs target directory if file already exists instead of temp directory
+- Add confirmation to download again if file already exists
+- Add service and theme patching option to add 'record' button to Video OSD while playing e.g./addons/skin.estuary/xml/VideoOSD.xml
+Source Code Credit: Video OSD skin patching code adapted from https://github.com/kharts/kastodi
+
+1.0.2
+-----
+- Abort gracefully when YTD cannot find JS function (out of date or bug)
+- Check availability of ffmpeg/avconv and use best combined stream if neither is available
+
+1.0.1
+-----
+- Fix download of playing video when paused instead of selected item
+
+1.0.0
+-----
+- Initial release
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart></fanart>
+        </assets>
+        <summary lang="en_GB">Add Download of Youtube Videos to Kodi context menus</summary>
+        <description lang="en_GB">Download highest quality Youtube video using script.module.youtube.dl via context menu.
+Adds 'record' button to Video OSD while youtube videos are playing.</description>
+        <language>en</language>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <website>https://github.com/AnonTester/</website>
+        <source>https://github.com/AnonTester/context.youtube.dl.menu</source>
+    </extension>
+</addon>

@@ -1,0 +1,13 @@
+<addon id="repository.anontester" name="Wuff's Kodi Addons" version="1.0.0" provider-name="anontester">
+	<extension point="xbmc.addon.repository" name="Wuff's Kodi Addon Repository">
+		<info compressed="true">https://raw.githubusercontent.com/anontester/kodi-repo/master/addons.xml.gz</info>
+		<checksum>https://raw.githubusercontent.com/anontester/kodi-repo/master/addons.xml.gz.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/anontester/kodi-repo/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Wuff's Addon Repository</summary>
+		<description>Download and install Wuff's Kodi addon repository.</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
