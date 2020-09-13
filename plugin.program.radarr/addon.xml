@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.program.radarr" name="Radarr" version="0.0.10" provider-name="GB160, wuff">
+    <requires>
+    <!--    <import addon="xbmc.python" version="3.0.0"/> -->
+        <import addon="script.module.requests" version="2.9.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <news>
+0.0.10 (2020-09-13)
+- replace xbmc.LOGNOTICE with xbmc.LOGINFO as LOGNOTICE was removed
+
+0.0.9 (2020-09-08)
+- Don't create season.json files
+- Fix loading posters and fanart
+
+0.0.8 (2019-11-27)
+- Python 3 compatibility
+
+0.0.7
+- Re-enable view download queue main menu entry
+- Add option to trigger Radarr search of individual movies
+- Some code cleanup
+- Don't delete files when removing movie from watchedlist
+
+0.0.6
+- last version by GB160 on 26/Jun/2018
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <language/>
+        <summary lang="en">Radarr</summary>
+        <description lang="en">Radarr Interface</description>
+        <platform>all</platform>
+        <license>GNU General Public License v3</license>
+        <forum></forum>
+        <source>https://github.com/gb160/gb160-kodi-addons</source>
+        <email></email>
+    </extension>
+</addon>

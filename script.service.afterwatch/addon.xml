@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.service.afterwatch" name="After Watch" version="1.2.3" provider-name="jvandenbroek, wuff">
+<addon id="script.service.afterwatch" name="After Watch" version="1.2.4" provider-name="jvandenbroek, wuff">
 	<requires>
 		<!-- <import addon="xbmc.python" version="3.0.0"/> -->
 	</requires>
@@ -23,6 +23,9 @@ Credits to Pedro Pinto (r.pynto@gmail.com) for the original add-on where most of
 		<platform>all</platform>
 		<email>jvandenbroek@gmail.com</email>
 		<news>
+1.2.4 (2020-09-13)
+* replace xbmc.LOGNOTICE with xbmc.LOGINFO as LOGNOTICE was removed
+
 1.2.3 (2020-06-28)
 * Remove python requirement to retain Kodi18/19 compatibility
 * Adjust Dialog().yesno due to Kodi19 change
