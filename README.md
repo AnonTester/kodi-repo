@@ -11,6 +11,7 @@ Forked and improved/fixed addons:
 * script.skin.helper.service
 * script.skin.helper.skinbackup
 * script.skin.helper.widgets
+* script.module.musicbrainz
 
 * script.service.afterwatch
 * service.subtitles.subscene.foreignonly
@@ -20,4 +21,3 @@ Forked and improved/fixed addons:
 Kodi 19/Matrix compatibility only:
 * screensaver.google.earth
 * screensaver.nasa 
-* script.module.musicbrainz
