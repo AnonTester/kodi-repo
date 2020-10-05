@@ -21,3 +21,4 @@ Forked and improved/fixed addons:
 Kodi 19/Matrix compatibility only:
 * screensaver.google.earth
 * screensaver.nasa 
+* script.module.cherrypy
