@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.module.cherrypy"
        name="CherryPy Kodi module"
-       version="11.0.2"
-       provider-name="marcelveldt, CherryPy Team">
+       version="17.4.2"
+       provider-name="marcelveldt, CherryPy Team, wuff">
     <requires>
         <!-- <import addon="xbmc.python" version="2.24.0"/> -->
         <import addon="script.module.six" version="1.9.0"/>
@@ -17,6 +17,16 @@
         <license>BSD</license>
         <source>https://github.com/marcelveldt/script.module.cherrypy</source>
         <platform>all</platform>
-        <news>v11.0.2: Remove Python requirement for Kodi18/19 compatibility</news>
+        <news>
+            v17.4.2:
+            - update CherryPy to last Py2/3 compatible version 17.4.2
+            - update cheroot to version 8.4.5
+            - add more-itertools-5.0.0 dependency
+            - add contextlib2-0.6.0.post1 dependency
+            - add zc.lockfile-2.0 dependency
+            - add jaraco.functools-2.0 dependency
+            v11.0.2: 
+            - Remove Python requirement for Kodi18/19 compatibility
+        </news>
     </extension>
 </addon>
