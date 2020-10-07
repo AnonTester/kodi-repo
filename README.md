@@ -17,8 +17,8 @@ Forked and improved/fixed addons:
 * service.subtitles.subscene.foreignonly
 * service.subtitles.subscene
 * skin.estuary.modv2
+* script.module.cherrypy
 
 Kodi 19/Matrix compatibility only:
 * screensaver.google.earth
 * screensaver.nasa 
-* script.module.cherrypy
