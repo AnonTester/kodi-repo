@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.module.cherrypy"
        name="CherryPy Kodi module"
-       version="17.4.2-2"
+       version="17.4.2-3"
        provider-name="marcelveldt, CherryPy Team, wuff">
     <requires>
         <!-- <import addon="xbmc.python" version="2.24.0"/> -->
@@ -10,14 +10,17 @@
     <extension point="xbmc.python.module" library="lib" />
     <extension point="xbmc.addon.metadata">
         <summary>CherryPy webserver packaged as Kodi module</summary>
-        <description>CherryPy is a pythonic, object-oriented web framework
-            CherryPy allows developers to build web applications in much the same way they would build any other object-oriented Python program. This results in smaller source code developed in less time.
-            CherryPy is now more than ten years old and it is has proven to be very fast and stable. It is being used in production by many sites, from the simplest to the most demanding.
-        </description>
+        <description>CherryPy is a pythonic, object-oriented web framework.[CR]CherryPy allows developers to build web applications in much the same way they would build any other object-oriented Python program. This results in smaller source code developed in less time.[CR]CherryPy is now more than ten years old and it is has proven to be very fast and stable. It is being used in production by many sites, from the simplest to the most demanding.</description>
         <license>BSD</license>
         <source>https://github.com/marcelveldt/script.module.cherrypy</source>
         <platform>all</platform>
+        <assets>
+			<icon>icon.png</icon>
+		</assets>
         <news>
+            v17.4.2-3:
+            - removed pkg_resource dependency (from TheTimeWalker 17.4.0 fork)
+            - added backports.functools_lru_cache 1.5
             v17.4.2-2:
             - add selectors2 2.0.2 dependency
             v17.4.2-1:
