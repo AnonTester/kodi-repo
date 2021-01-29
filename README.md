@@ -1,8 +1,10 @@
 # AnonTester Kodi Repository
 
-[repository.anontester-1.0.0.zip](https://github.com/AnonTester/kodi-repo/raw/master/repository.anontester/repository.anontester-1.0.0.zip)
+Download zip file for the repo and add to Kodi:
 
-Contains the following addons:
+https://github.com/AnonTester/kodi-repo/raw/master/repository.anontester/repository.anontester-1.0.0.zip
+
+This repo contains the following addons:
 
 Original addon:
 * context.youtube.dl.menu - Adds context menu/OSD button to download video from youtube
