@@ -1,5 +1,7 @@
 # AnonTester Kodi Repository
 
+[repository.anontester-1.0.0.zip](https://github.com/AnonTester/kodi-repo/raw/master/repository.anontester/repository.anontester-1.0.0.zip)
+
 Contains the following addons:
 
 Original addon:
