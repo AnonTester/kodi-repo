@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.service.afterwatch" name="After Watch" version="1.2.4" provider-name="jvandenbroek, wuff">
+<addon id="script.service.afterwatch" name="After Watch" version="1.2.5" provider-name="wuff">
 	<requires>
 		<!-- <import addon="xbmc.python" version="3.0.0"/> -->
 	</requires>
@@ -16,13 +16,16 @@
 
 The alternate file management method is used to be compatible with SMB and NFS shares. When using only local (mounted) paths, it's recommended not to activate this method (moving files will be much faster).
 
-NOTE: "Allow file renaming and deletion" under Settings -> Appearance -> File Lists needs to be enabled in order for this plugin to work. 
+NOTE: "Allow file renaming and deletion" under Settings -> Appearance -> File Lists needs to be enabled in order for this addon to work. 
 
-Credits to Pedro Pinto (r.pynto@gmail.com) for the original add-on where most of the code in this version is based on!
+Credits to Pedro Pinto (r.pynto@gmail.com) for the original add-on where most of the code in this version is based on up to v0.9.0 (2014-01-23) and jvandenbroek up to v1.0.8 (2019-02-19)!
 </description>
 		<platform>all</platform>
-		<email>jvandenbroek@gmail.com</email>
 		<news>
+1.2.5 (2021-03-22)
+* fix remove empty movies directory setting not being applied
+* add additional debug info
+
 1.2.4 (2020-09-13)
 * replace xbmc.LOGNOTICE with xbmc.LOGINFO as LOGNOTICE was removed
 
