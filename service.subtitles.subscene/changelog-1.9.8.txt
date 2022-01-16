@@ -1,0 +1,60 @@
+1.9.8 (wuff)
+- adjust Android platform check
+
+1.9.7 (wuff)
+- add Android platform check to extraction method
+- add icon to addons.xml
+
+1.9.6 (wuff)
+- add OS dependent extraction method (Windows fix)
+- add more debug info
+
+1.9.5 (wuff)
+- Adjust download function
+- Update providers,readme and source link as per https://github.com/jarmo/service.subtitles.subscene/pull/10
+
+1.9.4 (wuff)
+- Adjust windows/linux path when extracting on Kodi19
+- replace deprecated HTMLParser.unescape with html.unescape for Kodi19
+
+1.9.3 (backport changes from foreignonly version)
+- Fix extracting archives on Kodi19 (wuff)
+- Remove python requirement for both Kodi 18/19 compatibility (wuff)
+- Replace xbmc.translatePath with xbmcvfs.translatePath for Kodi19 (wuff)
+- Fix unicode issue in language preferences (wuff)
+- Fix filename search by not calling str on tuple (StefanRvO)
+
+1.9.0
+- split Kodi 18/19 release, but version still 1.8.2 (jarmo)
+
+1.8.2
+- Fix python 3 tv show subtitle search (wuff)
+
+1.8.1
+- Kodi 19 / Python 3 compatibility (wuff)
+- Add line break after subtitle title and before subtitle comments (wuff)
+- Change comment colour to silver for improved contrast of selected entries (wuff)
+
+1.8.0
+- fix searching for subtitles (jarmo)
+
+1.7.1
+- better download handling (CrowleyAJ - manacker)
+
+1.7.0
+- improved title matching (CrowleyAJ - manacker)
+
+1.6.0 (CrowleyAJ - manacker)
+- prefer title over filename for search (better handling of streaming services)
+- find subtitle files in subfolders of archives
+- consider preferred language
+
+1.5.0 (CrowleyAJ - manacker)
+- improved performance
+- improved language detection
+- removed support for languages with nearly no uploads on subscene
+- better title detection (release year can be one off)
+- better episode detection (allows episode markers in 1x01 format)
+
+1.1.0 (CrowleyAJ - manacker)
+- added uploader comments to download selection
