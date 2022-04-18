@@ -10,7 +10,6 @@ Original addon:
 * context.youtube.dl.menu - Adds context menu/OSD button to download video from youtube
 
 Forked and improved/fixed addons:
-* script.module.metadatautils
 * script.module.thetvdb
 * script.skin.helper.service
 * script.skin.helper.skinbackup
@@ -26,3 +25,7 @@ Forked and improved/fixed addons:
 Kodi 19/Matrix compatibility only:
 * screensaver.google.earth
 * screensaver.nasa 
+
+Remote addon as required by estuary mod v2 skin:
+* script.module.metadatautils
+
