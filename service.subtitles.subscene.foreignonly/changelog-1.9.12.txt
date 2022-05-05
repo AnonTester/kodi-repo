@@ -1,0 +1,79 @@
+1.9.12 (wuff)
+- add settings option to set debug level (default info)
+- reduced tvshow debug logging slightly
+
+1.9.11 (wuff)
+- add a lot of debug logging for tvshows
+
+1.9.10 (wuff)
+- add trailing slash and zip protocol to linux platform extract (for arm?)
+
+1.9.9 (wuff)
+- adjust http user-agent
+- retry 5 times to download subtitles before giving up gracefully
+
+1.9.8 (wuff)
+- adjust Android platform check
+
+1.9.7 (wuff)
+- add Android platform check to extraction method
+- add icon to addons.xml
+
+1.9.6 (wuff)
+- add OS dependent extraction method (Windows fix)
+- add more debug info
+
+1.9.5 (wuff)
+- adjust download function
+- update provider-detail and readme
+
+1.9.4 (wuff)
+- Adjust windows/linux path when extracting on Kodi19 
+- replace deprecated HTMLParser.unescape with html.unescape for Kodi19 
+
+1.9.3 (wuff)
+- Fix unicode issue in language preferences
+
+1.9.2 (wuff)
+- Replace xbmc.translatePath with xbmcvfs.translatePath for Kodi 19
+
+1.9.1 (wuff)
+- Fix extracting archives
+- Fix filename search (StefanRvO)
+- Remove python requirement for backward compatibility pre Kodi 19
+
+1.9.0 (jarmo)
+- Kodi 19 only release
+
+1.8.2 (wuff)
+- Fix python 3 tv show subtitle search
+
+1.8.1 (wuff)
+- Kodi 19 / Python 3 compatibility
+- Add line break after subtitle title and before subtitle comments 
+- Change comment colour to silver for improved contrast of selected entries
+
+1.8.0 (jarmo)
+- fix searching for subtitles
+
+1.7.1 (manacker)
+- better download handling
+
+1.7.0 (manacker)
+- improved title matching
+
+1.6.0
+- prefer title over filename for search (better handling of streaming services)
+- find subtitle files in subfolders of archives
+- consider preferred language
+
+1.5.0
+- improved performance
+- improved language detection
+- removed support for languages with nearly no uploads on subscene
+- better title detection (release year can be one off)
+- better episode detection (allows episode markers in 1x01 format)
+
+1.1.0
+- added uploader comments to download selection
+
