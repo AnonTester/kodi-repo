@@ -1,0 +1,222 @@
+1.3.0 (2022-02-12)
+* Remove python 2 compatibility
+* Episode/Movie rating/tagging can be used without file management now
+* code formatting cleanup
+* bug fixes related to error reporting
+
+1.2.5 (2021-03-22)
+* fix remove empty movies directory setting not being applied
+* add additional debug info
+
+1.2.4 (2020-09-13)
+* replace xbmc.LOGNOTICE with xbmc.LOGINFO as LOGNOTICE was removed
+
+1.2.3 (2020-06-28)
+* Remove python requirement to retain Kodi18/19 compatibility
+* Adjust Dialog().yesno due to Kodi19 change
+
+1.2.2 (2019-12-30)
+* simplify settings for Kodi 18 and below
+
+1.2.1 (2019-12-29)
+* fix error due to removal of credentials of non-smb paths
+
+1.2.0 (2019-12-29)
+* Reorganise settings, added restrictions menu
+* Add episode restriction option enabling to select the opposite of the exclude list, i.e. whitelist
+* Add movie/episode 'exclude folder' and 'include only folder' restriction
+
+1.1.1 (2019-12-25)
+* Add python 2 backwards compatibility
+* Skip processing if episodes or movies are not managed
+
+1.1.0 (2019-11-17)
+* Migrate to Python 3 for Kodi 19. Not backwards compatible.
+* Adjust setting to turn of display to only state Linux
+* Removed Windows CEC binary from addon
+
+1.0.10 (2019-06-26)
+* Remove duplicate setting "remove video from library"
+
+1.0.9 (2019-06-18):
+* Replace strings.xml with strings.po for Kodi v19 compatibility
+* Fix alternative method move
+
+1.0.8 (2019-02-15):
+* Remove unnecessary debug dialogs
+* Check on add-on start-up if already playing a video
+
+1.0.7 (2019-02-12):
+* Fix alternative method delete
+
+1.0.6 (2019-02-11):
+* Fixup screwups previous release ;-)
+* Removed obsolete validatePath function breaking paths containing double slashes
+
+1.0.5 (2019-02-11):
+* Fix removing empty dir when using alt file method (forced on nfs/smb shares)
+* Moved some settings from advanced to properties
+* Remove video from library is now visible again under properties
+* Some better error checking
+* Added tv show name in confirmation dialogs
+- Rating section not enabled on v18.0 (Leia) due this bug: https://github.com/xbmc/xbmc/issues/15252
+  Should work again when fixed in upstream Kodi
+
+1.0.4 (2019-02-07):
+* Assume watched after xx percent is working again
+* Retry getting player info on playback start
+
+1.0.3 (2019-02-06):
+* Fixed bug with processing movies caused by previous update
+
+1.0.2 (2019-02-05):
+* Implemented debug class providing better in-depth debugging
+* Catch division error or other exceptions on playback stop (noticed on Leia)
+* Turn off display on Linux supported when CEC available and cec-client installed
+* Option to auto close confirmation dialogs after set period
+* Other small fixes
+
+1.0.1 (2018-11-01):
+* Follow symlink when deleting files
+
+1.0.0 (2017-02-23):
+* Implemented exclude list. E.g. 'backup, archive' will match all paths
+  containing backup and/or archive (matches both dirs and files). You can supply
+  as many words or full paths as you want, as long as you separate them by comma.
+  Matching words with comma's isn't supported. Case-insensitive.
+
+0.9.9 (2017-02-10):
+* Added move or delete, which will first prompt to delete and if not, the move prompt appears afterwards.
+ Confirm deleting/moving option must be enabled for this to work, otherwise it defaults to delete.
+* Fixed hanging progress dialog when update library is enabled
+
+0.9.8 (2016-05-13):
+* Move/delete subfolders (1 level deep) and files when moving/deleting movies with
+  alternate file method or SMB/NFS shares. Standard file method (re)moves full tree (unchanged)
+* Remove hidden files Thumbs.db and .DS_Store if exists when deleting movies (SMB/NFS)
+
+0.9.7 (2016-04-14):
+* Do not move/delete duplicate copies of files not being played (ending with a number, eg '(1)')
+
+0.9.6 (2016-03-17):
+* Always use alternate method if source or destination is an SMB/NFS path (alternate method may be
+  deleted in some future version)
+
+0.9.5 (2016-03-16):
+* Added remove from library option (full clean-up is no longer necessary)
+* No longer display dialogs for preserve, rating and tagging
+* Fixed infinite hanging when confirmation dialog delay set to 0 (default) or empty
+* Started splitting and cleaning up code
+* Renamed add-on to script.service.afterwatch in compliance with Kodi rules
+* Other minor fixes
+
+0.9.4 (2016-03-09):
+* Directory removal fix alternate file method
+* Added error handlers for alternate file method operations
+
+0.9.3 (2016-03-08):
+* Delete or move all files matching video filename minus the extension.
+
+0.9.2 (2016-03-03):
+* Fix for alternative file method on TV episodes when using SMB/NFS shares.
+
+0.9.1 (2016-02-16):
+* Removed non working functions (IMDb etc.)
+* Rewrote functions to fix actions on SMB and NFS shares (use alternative file method)
+* Clean up library after moving/deleting optional
+* Optional confirm dialog delay, fixes interaction with other add-ons (Trakt rating dialog in my case)
+* Code is tested with Kodi 17 (Krypton), but should be compatible with at least Kodi 14 (Helix)
+* Many thanks to Pedro Pinto (r.pynto@gmail.com) for creating the original add-on
+
+0.9.0 (23-01-2014):
+* New feature: Open IMDb in browser
+* Bugfixes
+
+0.8.5 (17-01-2014):
+* Bugfixes
+
+0.8.4 (22-12-2013):
+* Minor changes
+
+0.8.3 (15-12-2013):
+* Bugfix: error starting
+
+0.8.2 (15-12-2013):
+* Bugfix: progress dialog not showing in frodo
+* Bugfix: error in preserve playcount/set tag if not in lib
+* Bugfix: recommended not working due to change in imdb site
+* Other small improvements
+
+0.8.1 (12-12-2013):
+* Bugfix: error when updating if progress dialog disabled
+
+0.8.0 (10-12-2013):
+* New feature: single folder structure for episodes
+* New feature: warning when deleting/moving many files
+* Bugfix: episodes broken
+* Bugfix: single folder files matching
+
+0.7.0 (03-12-2013):
+* New feature: preserve watched status (playcount)
+* New feature: set custom tag (gotham)
+* Improvement: separated post modules for movies/episodes
+* Bugfix: playcount when moving
+
+0.6.1 (29-11-2013):
+* Bugfix: broken addon
+
+0.6.0 (29-11-2013):
+* New feature: new progress bar (Gotham only)
+* New feature: Logoff user (post)
+* New feature: Show quit menu (post)
+* New feature: error dialogs
+* Improvement: rewrite progress handling, actions are divided between pre (normal) and post
+* Improvement: all confirm dialogs show before processing starts
+* Improvement: detect no internet connection when needed
+* Improvement: detect needed settings not setted while processing (user, pass, paths)
+* Other small improvements
+
+0.5.4 (12-11-2013):
+* Bugfix addon could not iniciate
+
+0.5.3 (06-11-2013):
+* Added option to set file management alternate method
+* Cleaned settings (please check your settings)
+
+0.5.2 (16-09-2013):
+* Improvements in file management, and change lib to xbmcvfs
+
+0.5.1 (08-09-2013):
+* Set 'assume as watched' to 100% to disable this feature (fix performance issues on slower machines)
+* Added option to hide progress dialog
+
+0.5.0 (02-06-2013):
+* Complete rewrite and bugfixing, plz check addon settings
+* Turn off screen (windows only)
+* Rate episode on library
+* Option to rate only library
+* Single progress dialog
+* Scan/clean library improvements
+* Recommendations from imdb mobile and english titles
+
+0.4.1 (26-04-2013):
+* Bugfix
+
+0.4.0 (26-04-2013):
+* People who liked this also liked
+* Small improvements
+
+0.3.0 (26-04-2013):
+* Added option to set tag with personal rating
+* Bugfix: Assume as watched on stop
+
+0.2.3 (25-04-2013):
+* Loading dialogs
+* Bugfix: deleting/moving folders inside folders
+* Bugfix: rating 1 / rating cancel
+* Other improvements
+
+0.2.2 (23-04-2013):
+* New icon and data
+
+0.2.1 (22-04-2013):

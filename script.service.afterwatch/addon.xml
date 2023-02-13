@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.service.afterwatch" name="After Watch" version="1.2.5" provider-name="wuff">
+<addon id="script.service.afterwatch" name="After Watch" version="1.3.0" provider-name="wuff">
 	<requires>
-		<!-- <import addon="xbmc.python" version="3.0.0"/> -->
+		<import addon="xbmc.python" version="3.0.0"/>
 	</requires>
 	<extension point="xbmc.service" library="service.py" start="login" />
 	<extension point="xbmc.python.script" library="script.py">
@@ -22,6 +22,12 @@ Credits to Pedro Pinto (r.pynto@gmail.com) for the original add-on where most of
 </description>
 		<platform>all</platform>
 		<news>
+1.3.0 (2022-02-12)
+* Remove python 2 compatibility
+* Episode/Movie rating/tagging can be used without file management now
+* code formatting cleanup
+* bug fixes related to error reporting
+
 1.2.5 (2021-03-22)
 * fix remove empty movies directory setting not being applied
 * add additional debug info
